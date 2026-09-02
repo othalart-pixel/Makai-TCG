@@ -1,0 +1,86 @@
+[
+  {
+    "id": "mission_defeat_enemy_001",
+    "name": "Eliminar la oposición",
+    "type": "mission",
+    "objective": "defeat_enemy",
+    "fail_condition": "front_defeated",
+    "description": "Vence a un enemigo en este frente.",
+    "vp": 1
+  },
+  {
+    "id": "mission_assassin_def_001",
+    "name": "Territorio de Cazadores",
+    "type": "mission",
+    "objective": "defeat_enemy",
+    "fail_condition": "assigned_deaths",
+    "fail_threshold": 2,
+    "modifier_type": "class_def_bonus",
+    "target_class": "assassin",
+    "value": 1,
+    "description": "Los Asesinos en esta misión obtienen +1 DEF.",
+    "vp": 1
+  },
+  {
+    "id": "mission_defender_def_001",
+    "name": "Zona Fortificada",
+    "type": "mission",
+    "objective": "defeat_enemy",
+    "fail_condition": "all_assigned_defeated",
+    "modifier_type": "class_def_bonus",
+    "target_class": "defender",
+    "value": 1,
+    "description": "Los Defensores en esta misión obtienen +1 DEF.",
+    "vp": 1
+  },
+  {
+    "id": "mission_assassin_atk_001",
+    "name": "Campo de Caza",
+    "type": "mission",
+    "objective": "defeat_enemy",
+    "fail_condition": "assigned_deaths",
+    "fail_threshold": 1,
+    "modifier_type": "class_atk_bonus",
+    "target_class": "assassin",
+    "value": 1,
+    "description": "Los Asesinos en esta misión obtienen +1 ATQ.",
+    "vp": 1
+  },
+  {
+    "id": "mission_light_fighter_atk_001",
+    "name": "Terreno Favorable",
+    "type": "mission",
+    "objective": "defeat_enemy",
+    "fail_condition": "front_defeated",
+    "modifier_type": "class_atk_bonus",
+    "target_class": "light_fighter",
+    "value": 1,
+    "description": "Los Combatientes ligeros en esta misión obtienen +1 ATQ.",
+    "vp": 1
+  },
+  {
+    "id": "mission_tank_def_001",
+    "name": "Zona de Contención",
+    "type": "mission",
+    "objective": "defeat_enemy",
+    "fail_condition": "assigned_deaths",
+    "fail_threshold": 2,
+    "modifier_type": "class_def_bonus",
+    "target_class": "tank",
+    "value": 1,
+    "description": "Los Tanques en esta misión obtienen +1 DEF.",
+    "vp": 1
+  },
+  {
+    "id": "mission_specialist_atk_001",
+    "name": "Área Inestable",
+    "type": "mission",
+    "objective": "defeat_enemy",
+    "fail_condition": "all_assigned_defeated",
+    "modifier_type": "class_atk_bonus",
+    "target_class": "fragile_specialist",
+    "value": 1,
+    "description": "Los Especialistas frágiles en esta misión obtienen +1 ATQ.",
+    "vp": 1
+  }
+]

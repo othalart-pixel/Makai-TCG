@@ -1,0 +1,836 @@
+[gd_scene format=3 uid="uid://cx8q2xyhw30o0"]
+
+[ext_resource type="Script" uid="uid://disymu2h8m2ah" path="res://main.gd" id="1_main"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hand_dock"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main")
+
+[node name="MainMenu" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Center" type="CenterContainer" parent="MainMenu"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="MainMenu/Center"]
+custom_minimum_size = Vector2(430, 0)
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="Title" type="Label" parent="MainMenu/Center/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "MAKAI TCG"
+horizontal_alignment = 1
+
+[node name="PlayPvpMenuButton" type="Button" parent="MainMenu/Center/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+text = "JUGAR VS PERSONA"
+
+[node name="PlayAiMenuButton" type="Button" parent="MainMenu/Center/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+text = "JUGAR VS IA"
+
+[node name="ManageDecksMenuButton" type="Button" parent="MainMenu/Center/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+text = "GESTIONAR MAZOS"
+
+[node name="PvpSetup" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Center" type="CenterContainer" parent="PvpSetup"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="PvpSetup/Center"]
+custom_minimum_size = Vector2(520, 0)
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="PvpSetup/Center/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "JUGAR VS PERSONA"
+horizontal_alignment = 1
+
+[node name="Player1Label" type="Label" parent="PvpSetup/Center/VBox"]
+layout_mode = 2
+text = "JUGADOR 1 — MAZO"
+
+[node name="PvpPlayer1DeckSelector" type="OptionButton" parent="PvpSetup/Center/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="Player2Label" type="Label" parent="PvpSetup/Center/VBox"]
+layout_mode = 2
+text = "JUGADOR 2 — MAZO"
+
+[node name="PvpPlayer2DeckSelector" type="OptionButton" parent="PvpSetup/Center/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="PvpSetupStatus" type="Label" parent="PvpSetup/Center/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Actions" type="HBoxContainer" parent="PvpSetup/Center/VBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 14
+
+[node name="StartPvpButton" type="Button" parent="PvpSetup/Center/VBox/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 52)
+layout_mode = 2
+text = "JUGAR"
+
+[node name="BackFromPvpButton" type="Button" parent="PvpSetup/Center/VBox/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 52)
+layout_mode = 2
+text = "VOLVER"
+
+[node name="AiSetup" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Center" type="CenterContainer" parent="AiSetup"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="AiSetup/Center"]
+custom_minimum_size = Vector2(520, 0)
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="AiSetup/Center/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "JUGAR VS IA"
+horizontal_alignment = 1
+
+[node name="HumanLabel" type="Label" parent="AiSetup/Center/VBox"]
+layout_mode = 2
+text = "TU MAZO"
+
+[node name="AiHumanDeckSelector" type="OptionButton" parent="AiSetup/Center/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="AiLabel" type="Label" parent="AiSetup/Center/VBox"]
+layout_mode = 2
+text = "MAZO DE LA IA"
+
+[node name="AiOpponentDeckSelector" type="OptionButton" parent="AiSetup/Center/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="AiSetupStatus" type="Label" parent="AiSetup/Center/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Actions" type="HBoxContainer" parent="AiSetup/Center/VBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 14
+
+[node name="StartAiButton" type="Button" parent="AiSetup/Center/VBox/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 52)
+layout_mode = 2
+text = "JUGAR"
+
+[node name="BackFromAiButton" type="Button" parent="AiSetup/Center/VBox/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 52)
+layout_mode = 2
+text = "VOLVER"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="MainScroll" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MainVBox" type="VBoxContainer" parent="MarginContainer/MainScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+theme_override_constants/separation = 6
+
+[node name="PlayerAHeader" type="Label" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "JUGADOR A — VP: 0"
+horizontal_alignment = 1
+
+[node name="PlayerADiscardRow" type="HBoxContainer" parent="MarginContainer/MainScroll/MainVBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="PlayerAMainDiscardLabel" type="Label" parent="MarginContainer/MainScroll/MainVBox/PlayerADiscardRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CEMENTERIO A — 0 cartas"
+
+[node name="ViewPlayerADiscardButton" type="Button" parent="MarginContainer/MainScroll/MainVBox/PlayerADiscardRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "VER"
+
+[node name="PlayerAMissionDiscardLabel" type="Label" parent="MarginContainer/MainScroll/MainVBox/PlayerADiscardRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "DESCARTE MISIONES A — 0"
+
+[node name="PlayerAHandTitle" type="Label" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "MANO A — ARRASTRA UNA CARTA"
+horizontal_alignment = 1
+
+[node name="PlayerAHandScroll" type="ScrollContainer" parent="MarginContainer/MainScroll/MainVBox"]
+custom_minimum_size = Vector2(0, 205)
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 0
+
+[node name="PlayerAHand" type="HBoxContainer" parent="MarginContainer/MainScroll/MainVBox/PlayerAHandScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="PlayerASupportTitle" type="Label" parent="MarginContainer/MainScroll/MainVBox"]
+visible = false
+layout_mode = 2
+text = "APOYOS A"
+horizontal_alignment = 1
+
+[node name="PlayerASupport" type="HBoxContainer" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 232)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="PlayerAFrontTitle" type="Label" parent="MarginContainer/MainScroll/MainVBox"]
+visible = false
+layout_mode = 2
+text = "FRENTE A"
+horizontal_alignment = 1
+
+[node name="PlayerAFront" type="HBoxContainer" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 232)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="PlayerAMissionTitle" type="Label" parent="MarginContainer/MainScroll/MainVBox"]
+visible = false
+layout_mode = 2
+text = "MISIONES A"
+horizontal_alignment = 1
+
+[node name="PlayerAMissionRow" type="HBoxContainer" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 196)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="StatusLabel" type="Label" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 88)
+layout_mode = 2
+text = "Preparando partida..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ActionRow" type="HBoxContainer" parent="MarginContainer/MainScroll/MainVBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="AttackButton" type="Button" parent="MarginContainer/MainScroll/MainVBox/ActionRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "ATTACK"
+
+[node name="DefendButton" type="Button" parent="MarginContainer/MainScroll/MainVBox/ActionRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "DEFEND"
+
+[node name="PassButton" type="Button" parent="MarginContainer/MainScroll/MainVBox/ActionRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "PASS TURN"
+
+[node name="ResourceChoicePanel" type="VBoxContainer" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ResourceChoiceTitle" type="Label" parent="MarginContainer/MainScroll/MainVBox/ResourceChoicePanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "PREPARAR COMBATE"
+horizontal_alignment = 1
+
+[node name="ResourceChoiceRow" type="VBoxContainer" parent="MarginContainer/MainScroll/MainVBox/ResourceChoicePanel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PlayerBMissionTitle" type="Label" parent="MarginContainer/MainScroll/MainVBox"]
+visible = false
+layout_mode = 2
+text = "MISIONES B"
+horizontal_alignment = 1
+
+[node name="PlayerBMissionRow" type="HBoxContainer" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 196)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="PlayerBFrontTitle" type="Label" parent="MarginContainer/MainScroll/MainVBox"]
+visible = false
+layout_mode = 2
+text = "FRENTE B"
+horizontal_alignment = 1
+
+[node name="PlayerBFront" type="HBoxContainer" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 232)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="PlayerBSupportTitle" type="Label" parent="MarginContainer/MainScroll/MainVBox"]
+visible = false
+layout_mode = 2
+text = "APOYOS B"
+horizontal_alignment = 1
+
+[node name="PlayerBSupport" type="HBoxContainer" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 232)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="PlayerBHandTitle" type="Label" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "MANO B — ARRASTRA UNA CARTA"
+horizontal_alignment = 1
+
+[node name="PlayerBHandScroll" type="ScrollContainer" parent="MarginContainer/MainScroll/MainVBox"]
+custom_minimum_size = Vector2(0, 205)
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 0
+
+[node name="PlayerBHand" type="HBoxContainer" parent="MarginContainer/MainScroll/MainVBox/PlayerBHandScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="PlayerBHeader" type="Label" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "JUGADOR B — VP: 0"
+horizontal_alignment = 1
+
+[node name="PlayerBDiscardRow" type="HBoxContainer" parent="MarginContainer/MainScroll/MainVBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="MissionBattlefield" type="HBoxContainer" parent="MarginContainer/MainScroll/MainVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+alignment = 1
+theme_override_constants/separation = 20
+
+[node name="PlayerBMainDiscardLabel" type="Label" parent="MarginContainer/MainScroll/MainVBox/PlayerBDiscardRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CEMENTERIO B — 0 cartas"
+
+[node name="ViewPlayerBDiscardButton" type="Button" parent="MarginContainer/MainScroll/MainVBox/PlayerBDiscardRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "VER"
+
+[node name="PlayerBMissionDiscardLabel" type="Label" parent="MarginContainer/MainScroll/MainVBox/PlayerBDiscardRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "DESCARTE MISIONES B — 0"
+
+[node name="PlayerHandDock" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -210.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Panel" type="PanelContainer" parent="PlayerHandDock"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hand_dock")
+
+[node name="Margin" type="MarginContainer" parent="PlayerHandDock/Panel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 2
+
+[node name="PlayerHandDockContent" type="VBoxContainer" parent="PlayerHandDock/Panel/Margin"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+
+[node name="GameHudSidebar" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -430.0
+offset_top = -390.0
+offset_bottom = 390.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Row" type="HBoxContainer" parent="GameHudSidebar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+theme_override_constants/separation = 4
+mouse_filter = 2
+
+[node name="HudSidebarPanel" type="PanelContainer" parent="GameHudSidebar/Row"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Margin" type="MarginContainer" parent="GameHudSidebar/Row/HudSidebarPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HudSidebarContent" type="VBoxContainer" parent="GameHudSidebar/Row/HudSidebarPanel/Margin"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="GameHudSidebar/Row/HudSidebarPanel/Margin/HudSidebarContent"]
+layout_mode = 2
+text = "ESTADO Y ACCIONES"
+horizontal_alignment = 1
+
+[node name="HudSidebarToggle" type="Button" parent="GameHudSidebar/Row"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(42, 96)
+layout_mode = 2
+size_flags_vertical = 4
+text = "◀"
+
+[node name="DeckBuilder" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 18
+
+[node name="DeckBuilderVBox" type="VBoxContainer" parent="DeckBuilder"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="DeckBuilder/DeckBuilderVBox"]
+layout_mode = 2
+text = "MAKAI TCG — DECK BUILDER"
+horizontal_alignment = 1
+
+[node name="DeckIdentityRow" type="HBoxContainer" parent="DeckBuilder/DeckBuilderVBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 10
+
+[node name="DeckNameInput" type="LineEdit" parent="DeckBuilder/DeckBuilderVBox/DeckIdentityRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+placeholder_text = "Nombre del deck"
+
+[node name="SavedDeckSelector" type="OptionButton" parent="DeckBuilder/DeckBuilderVBox/DeckIdentityRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+item_count = 1
+popup/item_0/text = "Decks guardados"
+popup/item_0/id = 0
+
+[node name="PresetRow" type="HBoxContainer" parent="DeckBuilder/DeckBuilderVBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 10
+
+[node name="AggroPresetButton" type="Button" parent="DeckBuilder/DeckBuilderVBox/PresetRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "PREARMADO: AGGRO"
+
+[node name="BalancePresetButton" type="Button" parent="DeckBuilder/DeckBuilderVBox/PresetRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "PREARMADO: BALANCE"
+
+[node name="ControlPresetButton" type="Button" parent="DeckBuilder/DeckBuilderVBox/PresetRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "PREARMADO: DEFENSA / CONTROL"
+
+[node name="MainDeckCounter" type="Label" parent="DeckBuilder/DeckBuilderVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "MAIN DECK: 0 / 40"
+horizontal_alignment = 1
+
+[node name="MainColumns" type="HBoxContainer" parent="DeckBuilder/DeckBuilderVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="MainAvailableColumn" type="VBoxContainer" parent="DeckBuilder/DeckBuilderVBox/MainColumns"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="DeckBuilder/DeckBuilderVBox/MainColumns/MainAvailableColumn"]
+layout_mode = 2
+text = "CARTAS DISPONIBLES — CLICK PARA +1"
+horizontal_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="DeckBuilder/DeckBuilderVBox/MainColumns/MainAvailableColumn"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MainAvailableList" type="VBoxContainer" parent="DeckBuilder/DeckBuilderVBox/MainColumns/MainAvailableColumn/Scroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MainDeckColumn" type="VBoxContainer" parent="DeckBuilder/DeckBuilderVBox/MainColumns"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="DeckBuilder/DeckBuilderVBox/MainColumns/MainDeckColumn"]
+layout_mode = 2
+text = "TU MAIN DECK — CLICK PARA -1"
+horizontal_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="DeckBuilder/DeckBuilderVBox/MainColumns/MainDeckColumn"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MainDeckList" type="VBoxContainer" parent="DeckBuilder/DeckBuilderVBox/MainColumns/MainDeckColumn/Scroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MissionDeckCounter" type="Label" parent="DeckBuilder/DeckBuilderVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "MISSION DECK: 0 / 10"
+horizontal_alignment = 1
+
+[node name="MissionColumns" type="HBoxContainer" parent="DeckBuilder/DeckBuilderVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="MissionAvailableColumn" type="VBoxContainer" parent="DeckBuilder/DeckBuilderVBox/MissionColumns"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="DeckBuilder/DeckBuilderVBox/MissionColumns/MissionAvailableColumn"]
+layout_mode = 2
+text = "MISIONES DISPONIBLES — CLICK PARA +1"
+horizontal_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="DeckBuilder/DeckBuilderVBox/MissionColumns/MissionAvailableColumn"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MissionAvailableList" type="VBoxContainer" parent="DeckBuilder/DeckBuilderVBox/MissionColumns/MissionAvailableColumn/Scroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MissionDeckColumn" type="VBoxContainer" parent="DeckBuilder/DeckBuilderVBox/MissionColumns"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="DeckBuilder/DeckBuilderVBox/MissionColumns/MissionDeckColumn"]
+layout_mode = 2
+text = "TU MISSION DECK — CLICK PARA -1"
+horizontal_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="DeckBuilder/DeckBuilderVBox/MissionColumns/MissionDeckColumn"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MissionDeckList" type="VBoxContainer" parent="DeckBuilder/DeckBuilderVBox/MissionColumns/MissionDeckColumn/Scroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DeckBuilderStatus" type="Label" parent="DeckBuilder/DeckBuilderVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Crea un deck, elige un prearmado o carga uno guardado."
+horizontal_alignment = 1
+
+[node name="BuilderActions" type="HBoxContainer" parent="DeckBuilder/DeckBuilderVBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="NewDeckButton" type="Button" parent="DeckBuilder/DeckBuilderVBox/BuilderActions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "NUEVO"
+
+[node name="SaveDeckButton" type="Button" parent="DeckBuilder/DeckBuilderVBox/BuilderActions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "GUARDAR"
+
+[node name="LoadDeckButton" type="Button" parent="DeckBuilder/DeckBuilderVBox/BuilderActions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CARGAR"
+
+[node name="DeleteDeckButton" type="Button" parent="DeckBuilder/DeckBuilderVBox/BuilderActions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "BORRAR"
+
+[node name="BackToMenuFromBuilderButton" type="Button" parent="DeckBuilder/DeckBuilderVBox/BuilderActions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "VOLVER AL MENÚ"
+
+[node name="DiscardPanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 20
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -220.0
+offset_right = 260.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="DiscardPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 18
+
+[node name="VBox" type="VBoxContainer" parent="DiscardPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="DiscardPanelTitle" type="Label" parent="DiscardPanel/Margin/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CEMENTERIO"
+horizontal_alignment = 1
+
+[node name="DiscardPanelContent" type="Label" parent="DiscardPanel/Margin/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "Sin cartas"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CloseDiscardButton" type="Button" parent="DiscardPanel/Margin/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CERRAR"
+
+[node name="EndGamePanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 30
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -145.0
+offset_right = 260.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="EndGamePanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="EndGamePanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="EndGameTitle" type="Label" parent="EndGamePanel/Margin/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "FIN DE PARTIDA"
+horizontal_alignment = 1
+
+[node name="ReplayButton" type="Button" parent="EndGamePanel/Margin/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+text = "JUGAR DE NUEVO"
+
+[node name="EndGameMenuButton" type="Button" parent="EndGamePanel/Margin/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+text = "VOLVER AL MENÚ"

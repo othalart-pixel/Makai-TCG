@@ -1,0 +1,147 @@
+[
+  {
+    "id": "assassin_001",
+    "name": "Asesino",
+    "type": "character",
+    "class": "assassin",
+    "base_atk": 3,
+    "base_def": 1,
+    "atk": 3,
+    "def": 1,
+    "hp": 4
+  },
+  {
+    "id": "defender_001",
+    "name": "Defensor",
+    "type": "character",
+    "class": "defender",
+    "base_atk": 1,
+    "base_def": 3,
+    "atk": 1,
+    "def": 3,
+    "hp": 5
+  },
+  {
+    "id": "tank_001",
+    "name": "Tanque",
+    "type": "character",
+    "class": "tank",
+    "base_atk": 1,
+    "base_def": 2,
+    "atk": 1,
+    "def": 2,
+    "hp": 7
+  },
+  {
+    "id": "fighter_001",
+    "name": "Combatiente ligero",
+    "type": "character",
+    "class": "light_fighter",
+    "base_atk": 2,
+    "base_def": 2,
+    "atk": 2,
+    "def": 2,
+    "hp": 5
+  },
+  {
+    "id": "specialist_001",
+    "name": "Especialista fragil",
+    "type": "character",
+    "class": "fragile_specialist",
+    "base_atk": 3,
+    "base_def": 1,
+    "atk": 3,
+    "def": 1,
+    "hp": 5
+  },
+  {
+    "id": "power_strike_001",
+    "name": "Golpe Potente",
+    "type": "attack",
+    "effect": "atk_bonus",
+    "value": 1,
+    "description": "Permite atacar. +1 ATQ durante este combate."
+  },
+  {
+    "id": "precise_attack_001",
+    "name": "Ataque Preciso",
+    "type": "attack",
+    "effect": "ignore_defense",
+    "value": 1,
+    "description": "Permite atacar. Ignora 1 DEF durante este combate."
+  },
+  {
+    "id": "execution_001",
+    "name": "Ejecución",
+    "type": "attack",
+    "effect": "execution_bonus",
+    "value": 1,
+    "description": "Permite atacar. +1 ATQ si el objetivo tiene 50% de VID o menos."
+  },
+  {
+    "id": "coordinated_attack_001",
+    "name": "Ataque Coordinado",
+    "type": "attack",
+    "effect": "support_bonus",
+    "value": 1,
+    "description": "Permite atacar. +1 ATQ si existe un aliado en el otro slot de la misma misión."
+  },
+  {
+    "id": "guard_001",
+    "name": "Guardia",
+    "type": "defense",
+    "effect": "def_bonus",
+    "value": 1,
+    "description": "Permite defender. +1 DEF durante este combate."
+  },
+  {
+    "id": "total_block_001",
+    "name": "Bloqueo Total",
+    "type": "defense",
+    "effect": "damage_reduction",
+    "value": 1,
+    "description": "Permite defender. Reduce en 1 el daño recibido."
+  },
+  {
+    "id": "support_cover_001",
+    "name": "Cobertura del Apoyo",
+    "type": "defense",
+    "effect": "support_def_bonus",
+    "value": 1,
+    "description": "Permite defender. +1 DEF si existe un aliado en Support de esta misión."
+  },
+  {
+    "id": "endure_001",
+    "name": "Resistir",
+    "type": "defense",
+    "effect": "survive_at_one",
+    "value": 1,
+    "description": "Permite defender. Si este ataque fuera a derrotarte, quedas con 1 VID."
+  },
+  {
+    "id": "tactical_replacement_001",
+    "name": "Recambio Táctico",
+    "type": "utility",
+    "effect": "discard_draw",
+    "discard": 2,
+    "draw": 5,
+    "description": "Descarta 2 cartas y roba 5."
+  },
+  {
+    "id": "planning_001",
+    "name": "Planificación",
+    "type": "utility",
+    "effect": "draw",
+    "draw": 2,
+    "description": "Roba 2 cartas."
+  },
+  {
+    "id": "filter_hand_001",
+    "name": "Filtrar Mano",
+    "type": "utility",
+    "effect": "discard_draw",
+    "discard": 1,
+    "draw": 2,
+    "description": "Descarta 1 carta y roba 2."
+  }
+]
